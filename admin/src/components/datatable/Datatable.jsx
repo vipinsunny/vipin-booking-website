@@ -5,7 +5,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
-import api from ""
 
 const Datatable = ({columns}) => {
   const location = useLocation();
@@ -13,16 +12,13 @@ const Datatable = ({columns}) => {
   const [list, setList] = useState();
   const { data, loading, error } = useFetch(`/${path}`);
 
-
   useEffect(() => {
     setList(data);
   }, [data]);
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(
-        `/${path}/${id}`
-      );
+      await axios.delete(`/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
     } catch (err) {}
   };
