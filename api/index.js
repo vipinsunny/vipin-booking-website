@@ -25,7 +25,7 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
-// app.use(cors())
+app.use(cors({ origin: "https://stellular-kataifi-f6c0ce.netlify.app" }))
 app.use(cookieParser())
 app.use(express.json());
 
