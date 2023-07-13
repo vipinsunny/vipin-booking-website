@@ -52,7 +52,10 @@ const NewHotel = () => {
         photos: list,
       };
 
-      await axios.post("/hotels", newhotel);
+      await axios.post(
+        "https://mern-booking-website.onrender.com/hotels",
+        newhotel
+      );
     } catch (err) {console.log(err)}
   };
   return (
