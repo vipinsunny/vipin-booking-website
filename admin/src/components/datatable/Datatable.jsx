@@ -5,12 +5,14 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import axios from "axios";
+import api from ""
 
 const Datatable = ({columns}) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState();
   const { data, loading, error } = useFetch(`/${path}`);
+
 
   useEffect(() => {
     setList(data);
@@ -19,7 +21,7 @@ const Datatable = ({columns}) => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://mern-booking-website.onrender.com/${path}/${id}`
+        `/${path}/${id}`
       );
       setList(list.filter((item) => item._id !== id));
     } catch (err) {}
