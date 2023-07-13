@@ -1,14 +1,13 @@
 {
   "name": "bookingapp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vipin Kuriakose Sunny",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -19,5 +18,15 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.1",
     "nodemon": "^2.0.16"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipinsunny/vipin-booking-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vipinsunny/vipin-booking-website/issues"
+  },
+  "homepage": "https://github.com/vipinsunny/vipin-booking-website#readme",
+  "description": ""
 }
